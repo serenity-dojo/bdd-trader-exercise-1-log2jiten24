@@ -153,6 +153,23 @@
             <artifactId>guava</artifactId>
             <version>31.1-jre</version>
         </dependency>
+
+        <!-- Cucumber SERENITY BDD DEPENDENCIES -->
+
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-cucumber</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-screenplay</artifactId>
+            <version>${serenity.version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -195,7 +212,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M3</version>
+                <version>3.1.2</version>
                 <configuration>
                     <includes>
                         <include>**/unittests/**/When*.java</include>
@@ -207,7 +224,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>3.0.0-M3</version>
+                <version>3.2.3</version>
                 <configuration>
                     <includes>
                         <include>**/acceptancetests/**/*.java</include>
